@@ -1,0 +1,16 @@
+[Unit]
+Description=Resilion Sync service
+After=network.target network-online.target
+
+[Service]
+User=USER
+Group=USER
+Restart=on-failure
+PIDFile=/home/USER/.config/resilio-sync/sync.pid
+ExecStartPre=
+ExecStart=
+ExecStart=/home/USER/
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
